@@ -17,7 +17,9 @@ function stringMasLarga(strings) {
       totales.push(palabra.length);
     }
     
-    let maximo = Math.max.apply(null, totales);
+    let maximo = totales.reduce(function(a,b){
+    return Math.max(a, b);
+		}, -Infinity);
     
     for (let elemento of strings) {
       if (elemento.length === maximo) {
