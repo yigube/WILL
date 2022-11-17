@@ -13,7 +13,12 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-  return ""+num === (""+num).split("").reverse().join("")
+    let str=num.toString();
+    let invertido= str.split("").reverse().join("");
+    if(str==invertido){
+     return true;
+    }
+    return false
 
 }
 
